@@ -76,8 +76,8 @@ function calculateExpression(){
         state.lastExpression = state.expression;
         state.result = Evaluator.evaluate(state.expression)
         state.expression = "0" 
-        pushResultToUi()
         updateUi()
+        pushResultToUi()
     }catch(e : any){
         showError(e.message)
     }

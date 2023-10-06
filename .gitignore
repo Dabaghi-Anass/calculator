@@ -1,2 +1,17 @@
-node_modules
-.env
+# Vite Output
+/dist/
+/.cache/
+
+# Node.js files
+/node_modules/
+
+# IDE/Editor-specific files
+/.idea/
+.vscode/
+
+# Miscellaneous
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local

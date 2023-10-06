@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favico.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/style.css">
+    <title>Calculator</title>
+  </head>
+  <body>
+    <div id="app">
+       <div class="calculator-container">
+         <div class="calculator-result-section">
+            <span class="error"><img src="src/error.png" alt="e"> Error : <span id="error-placeholder"></span></span>
+             <span class="operation"></span>
+             <span class="result">0</span>
+          </div>
+          <div class="calculator-input-section">
+            <div class="buttons">
+              <button class="btn special-button action-button" data-value="clean">AC</button>
+              <button class="btn special-button action-button" data-value="%">%</button>
+              <button class="btn special-button action-button" data-value="/">&#247;</button>
+              <button class="btn special-button action-button" data-value="-">-</button>
+              <button class="btn number-button" data-value="7">7</button>
+              <button class="btn number-button" data-value="8">8</button>
+              <button class="btn number-button" data-value="9">9</button>
+              <button class="btn special-button action-button" data-value="*">&#10005;</button>
+              <button class="btn number-button" data-value="4">4</button>
+              <button class="btn number-button" data-value="5">5</button>
+              <button class="btn number-button" data-value="6">6</button>
+              <button class="btn special-button action-button" data-value="+">&#43;</button>
+              <button class="btn number-button" data-value="1">1</button>
+              <button class="btn number-button" data-value="2">2</button>
+              <button class="btn number-button" data-value="3">3</button>
+              <button class="btn number-button" data-value=".">.</button>
+              <button class="btn number-button" data-value="0">0</button>
+              <button class="btn action-button" data-value="delete">DEL </button>
+              <button class="btn equal-button" data-value="equal">=</button>
+            </div>
+            <!-- <div class="functions"></div> -->
+          </div>
+       </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

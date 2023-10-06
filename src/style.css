@@ -1,0 +1,126 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --light-gray : #2b292a;
+  --dark-gray : #212121;
+  --primary-gray : #353535;
+  --primary-clr : #32518b;
+  --secondary-clr : #ee0034;
+  --text-gray: #999596;
+  --text-white: #ffffff;
+  --radius :  .7rem;
+  --primary-gradient : var(--primary-clr);
+  --secondary-gradient :var(--secondary-clr);
+}
+html{
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family:"Mono",Arial,sans-serif;
+  height: 100%;
+}
+*{
+  box-sizing: border-box;
+}
+#app{
+  height: 100%;
+}
+
+.calculator-container{
+  background: var(--light-gray);
+  color: var(--text-white);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.calculator-result-section{
+  min-height: 30%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+.result{
+  padding: 1.5rem 0;
+  font-size: 3rem;
+}
+.calculator-input-section{
+  padding: 1rem;
+  background: var(--dark-gray);
+  /* height: 100%; */
+  display: flex;
+  gap: 1rem;
+  aspect-ratio: 1;
+}
+.calculator-input-section .functions{
+  background: var(--primary-gradient);
+  padding: .7rem;
+  border-radius: var(--radius) 0 0 var(--radius);
+}
+.calculator-input-section .buttons{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+.calculator-input-section .buttons > :last-child{
+  grid-row: 4 / 6;
+  grid-column: 4 / 5;
+}
+.btn{
+  background: var(--primary-gray);
+  color: var(--text-white);
+  border-radius: var(--radius);
+  border: none;
+  font-size: 1.8rem;
+  transition: opacity 300ms;
+}
+.btn:hover{
+  opacity: .7;
+}
+.btn:focus-visible{
+  outline: 2px solid var(--secondary-clr);
+  outline-offset: 2px;
+}
+
+.equal-button{
+  background: var(--secondary-gradient);
+}
+.special-button{
+  background: var(--primary-gradient);
+}
+.error{
+  opacity: 0;
+  pointer-events: none;
+  user-select: none;
+  background-color: rgba(255, 32, 69, 0.932);
+  width: 100%;
+  align-self: flex-start;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  top: 0;
+  left: 0;
+  position: absolute;
+  transition: opacity 300ms;
+}
+.error img{
+  width: 2rem;
+
+}
+.operator{
+  color: rgb(255, 153, 0);
+}
+.operation{
+  opacity: .4;
+}
+@media screen and (max-width : 490px) {
+  :root{
+    font-size: 12px;
+  }
+}
